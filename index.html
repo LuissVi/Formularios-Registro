@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form action="">
+        <fieldset>
+            <legend>DATOS BÁSICOS</legend>
+
+            <div class="div">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos">
+            </div>
+
+            <div class="div">
+                <label for="nombre">Nombre:<span>*</span></label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+
+            <div class="div">
+                <label for="email">Email:<span>*</span></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="div">
+                <label for="Tlf">Teléfono:</label>
+                <input type="number" name="tlf" id="tlf">
+            </div>
+
+            <label class="tit-dni" for="">Documento de identidad<span>*</span></label>
+            <div class="radio">
+                <div>
+                    <label for="">
+                        DNI
+                        <input type="radio" required name="ident" value="DNI">
+                    </label>
+                    <label for="">
+                        NIE
+                        <input type="radio" required name="ident" value="NIE">
+                    </label>
+                </div>
+                <label>
+                    <input class="nro" type="text" pattern="[0-9]{8}" name="documento" placeholder="Número">
+                </label>
+            </div>
+
+            <div class="gen">
+
+                <label for="">
+                    H
+                    <input type="radio" name="gen" value="masculino">
+                </label>
+                <label for="">
+                    M
+                    <input type="radio" name="gen" id="mujer" value="femenino">
+                </label>
+                <label for=""></label>
+                Prefiero no decirlo
+                <input type="radio" name="gen" id="hombre" value="no lo digo">
+            </div>
+
+            <div class="div">
+                <label for="fechNac">F.Nacimiento</label>
+                <input type="date" name="fechNac" id="fechNac" required>
+            </div>
+
+            <div class="btn-siguiente">
+                <input type="submit" value=">" title="siguiente">
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

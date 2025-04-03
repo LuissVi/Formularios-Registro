@@ -1,0 +1,19 @@
+@keyframes leftHidden {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+}
+
+.f1 {
+
+    animation-name: leftHidden;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    /* Mantiene el estado final de la animación */
+}

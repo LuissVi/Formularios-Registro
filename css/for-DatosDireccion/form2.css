@@ -1,0 +1,163 @@
+/* Contenedor del formulario */
+.form2 {
+    max-width: 480px;
+    /* margin: auto; */
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgb(244, 237, 228);
+    box-shadow: 0px 4px 13px black;
+    /* margin-top: 1rem; */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form2 fieldset{
+    padding: .1rem;
+}
+
+/* Sección de tipo de vía (label + select + input en fila) */
+.f2-select {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    /* flex-wrap: wrap; */
+}
+
+.f2-select label {
+    min-width: 160px;
+    height: 1.6rem;
+    border-radius: 4px;
+}
+
+.f2-select select {
+    width: 20%;
+    /* padding: 5px; */
+    height: 1.6rem;
+    border-radius: 4px;
+}
+
+.f2-select input {
+    width: 15%;
+    height: 1.6rem;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+/* ------Sección de dirección (dos columnas)------- */
+.direc-items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: .5rem;
+}
+
+.direc-items section {
+    width: 100%;
+    display: flex;
+}
+
+.direc-items label {
+    display: flex;
+    flex: 2.5;
+    align-items: center;
+    height: 1.6rem;
+}
+
+.direc-items input {
+    width: 15%;
+    margin: auto;
+    height: 1.6rem;
+    border: 1px solid gray;
+    border-radius: 4px;
+    flex: 1.2;
+    margin: 0px;
+
+}
+/* -----seccion clase:caja-pais----- */
+.caja-pais{
+    display: flex;
+    gap: .3rem;
+}
+.caja-pais label {
+    flex: 1.3;
+    height: 1.6rem;
+    border-radius: 4px;
+    margin-bottom: .6rem;
+}
+
+.caja-pais input {
+    width: 30%;
+    flex: 1.2;
+    height: 1.6rem;
+    border-radius: 4px;
+    border: 1px solid gray;
+
+}
+
+/* margin al campo España */
+.inp-Es{
+    margin-right: .5rem;
+}
+/* ---------seccion de provincia-municipo------- */
+.caja-provincia {
+    display: flex;
+    gap: .3rem;
+}
+
+.caja-provincia label {
+    flex: 1;
+    height: 1.6rem;
+    border-radius: 4px;
+}
+
+.caja-provincia select {
+    flex: 1;
+    height: 1.6rem;
+    border-radius: 4px;
+}
+.caja-provincia .select-provincia{
+    margin-right: .5rem;
+}
+/* -----seccion botones back-next----- */
+.btn-BackNext{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    justify-content:space-around;
+    margin-top: .6rem;
+}
+.btn-BackNext input{
+    border-radius: 4px;
+    border: 1px solid gray;
+
+}
+
+/* Responsivo: apilar en pantallas pequeñas */
+@media (max-width: 480px) {
+    .f2-select {
+        margin: auto;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .f2-select .label {
+        display: block;
+        flex: 1;
+    }
+
+    .f2-select select {
+        flex: 1;
+        width: 50%;
+        margin-right: 2rem;
+    }
+
+    .f2-select input {
+        flex: 1;
+        width: 30%;
+    }
+
+}

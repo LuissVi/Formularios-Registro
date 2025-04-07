@@ -1,19 +1,72 @@
-@keyframes leftHidden {
-    from {
-        opacity: 1;
-    }
-
-    to {
+/*desliza desde la derecha(puede ser fuera de pantalla)*/
+@keyframes slideInFromRight{
+    from{
+        transform: translate(100%,-50%);
         opacity: 0;
-        transform: translateX(-500px);
     }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
 }
 
-.f1 {
-
-    animation-name: leftHidden;
+.animate-in-right {
+    animation: slideInFromRight;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
-    /* Mantiene el estado final de la animación */
-}
+  }
+
+  /*desliza hacia la izquierda(comienza desde su lugar actual(centro))*/
+  @keyframes slideOutToLeft {
+    from {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: translate(-200%, -50%);
+      opacity: 0;
+    }
+  }
+  .animate-out-left {
+    animation: slideOutToLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  /* desliza desde la izquierda(puede ser fuera de la pantalla)*/
+  @keyframes slideInFromLeft {
+    from {
+      transform: translate(-200%, -50%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  .animate-in-left {
+    animation-name: slideInFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  /*animacion hacia la derecha(puede ser desde su lugar)*/
+  @keyframes slideOutToRight {
+    from {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: translate(100%, -50%);
+      opacity: 0;
+    }
+  }
+  .animate-out-right {
+    animation: slideOutToRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }

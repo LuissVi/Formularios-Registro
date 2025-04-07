@@ -1,85 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="css/form-datosBasicos/style.css">
+
     <link rel="stylesheet" href="css/form-datosBasicos/animaciones/form1.css">
+
+    <link rel="stylesheet" href="css/for-DatosDireccion/form2.css">
 </head>
+
 <body>
-    
-    <h1>Formulario de registro</h1>
-    <form action="" method="post" id="form1">
-        <fieldset>
-            <legend>DATOS BÁSICOS</legend>
+    <section>
+        <h1>Formulario de registro</h1>
+        <form action="" method="post" class="form1 form-position" id="form1" >
+            <fieldset>
+                <legend>DATOS BÁSICOS</legend>
 
-            <div class="div">
-                <label for="apellidos">Apellidos:</label>
-                <input type="text" name="apellidos" id="apellidos" id="apellidos">
-            </div>
+                <div class="div">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" name="apellidos" id="apellidos">
+                </div>
 
-            <div class="div">
-                <label for="nombre">Nombre:<span>*</span></label>
-                <input type="text" name="nombre" id="nombre" required>
-            </div>
+                <div class="div">
+                    <label for="nombre">Nombre:<span>*</span></label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
 
-            <div class="div">
-                <label for="email">Email:<span>*</span></label>
-                <input type="email" name="email" id="email" required>
-            </div>
+                <div class="div">
+                    <label for="email">Email:<span>*</span></label>
+                    <input type="email" name="email" id="email" required>
+                </div>
 
-            <div class="div">
-                <label for="Tlf">Teléfono:</label>
-                <input type="number" name="tlf" id="tlf">
-            </div>
+                <div class="div">
+                    <label for="tlf">Teléfono:</label>
+                    <input type="number" name="tlf" id="tlf">
+                </div>
 
-            <label class="tit-dni" for="">Documento de identidad<span>*</span></label>
-            <div class="radio">
-                <div>
-                    <label for="">
-                        DNI
-                        <input type="radio" required name="ident" value="DNI">
-                    </label>
-                    <label for="">
-                        NIE
-                        <input type="radio" required name="ident" value="NIE">
+                <label class="tit-dni">Documento de identidad<span>*</span></label>
+                <div class="radio">
+                    <div>
+                        <label for="dni">
+                            DNI
+                            <input type="radio" required name="tipoDocu" value="DNI" id="dni">
+                        </label>
+                        <label for="nie">
+                            NIE
+                            <input type="radio" required name="tipoDocu" value="NIE" id="nie">
+                        </label>
+                    </div>
+                    <label>
+                        <input class="nro" type="text" pattern="[0-9]{8}" name="numDoc" placeholder="Número">
                     </label>
                 </div>
-                <label>
-                    <input class="nro" type="text" pattern="[0-9]{8}" name="documento" placeholder="Número">
-                </label>
-            </div>
 
-            <div class="gen">
+                <div class="gen">
 
-                <label for="">
-                    H
-                    <input type="radio" name="gen" value="masculino">
-                </label>
-                <label for="">
-                    M
-                    <input type="radio" name="gen" id="mujer" value="femenino">
-                </label>
-                <label for=""></label>
-                Prefiero no decirlo
-                <input type="radio" name="gen" id="hombre" value="no lo digo">
-            </div>
+                    <label for="hombre">
+                        H
+                        <input type="radio" name="gen" value="masculino" id="hombre">
+                    </label>
+                    <label for="mujer">
+                        M
+                        <input type="radio" name="gen" id="mujer" value="femenino">
+                    </label>
+                    <label for="na"></label>
+                    Prefiero no decirlo
+                    <input type="radio" name="gen" id="na" value="no lo digo">
+                </div>
 
-            <div class="div">
-                <label for="fechNac">F.Nacimiento</label>
-                <input type="date" name="fechNac" id="fechNac" required>
-            </div>
+                <div class="div">
+                    <label for="fechNac">F.Nacimiento</label>
+                    <input type="date" name="fechNac" id="fechNac" required>
+                </div>
 
-            <div class="btn-siguiente">
-                <input type="submit" value=">>" onclick="" title="siguiente" id="btn-sgt">
-            </div>
-        </fieldset>
-    </form>
+                <div class="btn-siguiente">
+                    <input type="submit"  value=">>" onclick="" title="siguiente" id="btn-next1">
+                </div>
+            </fieldset>
+        </form>
 
-    <!-- Formulario nro2 -->
+        <!-- Formulario nro2 -->
 
+        <form action="" method="post" class="form2 form-position hidden" id="form2">
+            <fieldset class="">
+                <legend>Datos Dirección</legend>
 
-<script src="js/script.js"></script>
+                <section class="f2-select">
+                    <label class="label" for="via">Tipo de Vía:<span>*</span></label>
+                    <select name="via" id="via" required>
+                        <option value="calle">Calle</option>
+                        <option value="avenida">Avenida</option>
+                        <option value="plaza">Plaza</option>
+                        <option value="camino">Camino</option>
+                        <option value="carretera">Carretera</option>
+                        <option value="paseo">Paseo</option>
+                        <option value="ronda">Ronda</option>
+                        <option value="travesia">Travesía</option>
+                        <option value="urbanizacion">Urbanización</option>
+                        <option value="poligono">Polígono</option>
+                        <option value="barrio">Barrio</option>
+                        <option value="via">Vía</option>
+                        <option value="callejon">Callejón</option>
+                        <option value="carrer">Carrer (Cataluña, Comunidad Valenciana, Baleares)</option>
+                        <option value="rua">Rúa (Galicia)</option>
+                    </select>
+                    <input type="text" name="nomCalle" id="nomCalle" maxlength="25" pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ]+( [A-Za-zÁÉÍÓÚáéíóúñÑ]+)*$" placeholder="nombre">
+                </section>
+                <section class="direc-items">
+                    <section>
+                        <label for="numCalle">Número:<span>*</span> </label>
+                        <input type="text" name="numCalle" id="numCalle" pattern="^[0-9]{1,5}" maxlength="5" required>
+                    </section>
+                    <section>
+                        <label for="numPortal">Portal:</label>
+                        <input type="text" name="portal" id="numPortal" pattern="^[0-9]{1,5}(-[A-Za-z0-9])?$"
+                        maxlength="7" oninput="validaPortal()">
+                    </section>
+                </section>
+                <section class="direc-items">
+                    <section>
+                        <label for="piso">Piso:</label>
+                        <input type="text" name="piso" id="piso" maxlength="3" pattern="[0-9A-Za-z]+">
+                    </section>
+                    <section>
+                        <label for="cp">C.Postal:<span>*</span></label>
+                        <input type="text" name="cp" id="cp" pattern="[0-9]{5}" maxlength="5" required>
+                    </section>
+                </section>
+
+                <section class="caja-pais">
+                    <label for="pais">Pais</label>
+                    <input type="text" value="ESPAÑA" class="inp-Es">
+                    <label for="comunidad">Comunidad</label>
+                    <input type="text" name="comunidad" id="comunidad">
+                </section>
+
+                <section class="caja-provincia">
+                    <label for="provincia">Provincia</label>
+                    <select name="provincia" class="select-provincia" id="provincia"></select>
+                    <label for="poblacion">Municipio</label>
+                    <select name="poblacion" id="poblacion"></select>
+                </section>
+
+                <section class="btn-BackNext">
+                    <input type="button" name="" id="btn-back1" value="<<" title="Atras">
+                    <input type="submit" value=">>" title="Siguiente" id="btn-sgt2">
+                </section>
+            </fieldset>
+            
+        </form>
+    </section>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
